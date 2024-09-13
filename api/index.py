@@ -7,11 +7,8 @@ import os
 import time
 import google.generativeai as genai
 
-LINE_CHANNEL_ACCESS_TOKEN = 'r0DAx9oUiIgrko1fNfBNCBb7hqVAwG7xhB6qrHLokZcjjFeQO9OE50v4p2bzHu9axuX7PhHPsh+IcFhfTQgx3k6xbyxrs1+K4v6x/evR8zRX0JNtKLBhr0z8k6gfmGIeCo2g8O46tzRHI8YaHX0mkwdB04t89/1O/w1cDnyilFU='
-LINE_CHANNEL_SECRET = '7e2263c98bf6a8aa163cf7512f0bcbbf'
-
-line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN )
-line_handler = WebhookHandler(LINE_CHANNEL_SECRET )
+line_bot_api = LineBotApi(os.getenv("LINE_CHANNEL_ACCESS_TOKEN"))
+line_handler = WebhookHandler(os.getenv("LINE_CHANNEL_SECRET"))
 working_status = os.getenv("DEFALUT_TALKING", default = "true").lower() == "true"
 
 
