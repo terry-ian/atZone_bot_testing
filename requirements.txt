@@ -2,4 +2,4 @@ Flask
 gunicorn
 line-bot-sdk
 google-generativeai
-werkzeug
+werkzeug==2.0.3
