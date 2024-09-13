@@ -1,5 +1,5 @@
-Flask
+flask==2.2.2
+Werkzeug==2.3.7
 gunicorn
 line-bot-sdk
 google-generativeai
-werkzeug==2.0.3
