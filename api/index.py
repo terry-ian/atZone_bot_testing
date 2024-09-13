@@ -133,7 +133,7 @@ def handle_message(event):
     if working_status:
         msg=str(event.message.text)
         response = chat_session.send_message(msg)
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(response.text))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(response.text.replace('**','').replace('*','-')))
 
 
 if __name__ == "__main__":
