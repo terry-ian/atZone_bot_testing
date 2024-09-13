@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[7]:
-
-
 from flask import Flask, request
 from linebot.v3 import ( WebhookHandler)
 from linebot.v3.exceptions import (InvalidSignatureError)
@@ -138,10 +132,6 @@ def handle_message(event):
     msg=str(event.message.text)
     response = chat_session.send_message(msg)
     line_bot_api.reply_message(event.reply_token, TextSendMessage(response))
-
-@handler.add(PostbackEvent)
-def handle_message(event):
-    print(event.postback.data)
 
 
 @handler.add(MemberJoinedEvent)
