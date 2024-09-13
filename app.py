@@ -18,7 +18,14 @@ from linebot.models import MemberJoinedEvent
 import os
 import time
 import google.generativeai as genai
+from http.server import BaseHTTPRequestHandler
 
+if isinstance(base, type) and issubclass(base, BaseHTTPRequestHandler):
+    # base 是類型，並且是 BaseHTTPRequestHandler 的子類
+    pass
+else:
+    # base 不是類型，處理錯誤
+    print("Error: base is not a class.")
 
 # In[8]:
 
