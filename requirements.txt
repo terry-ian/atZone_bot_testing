@@ -1,5 +1,5 @@
 Flask
-gunicorn==20.1.0
+gunicorn
 line-bot-sdk
 google-generativeai
 werkzeug
